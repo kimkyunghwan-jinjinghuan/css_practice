@@ -1,0 +1,20 @@
+<style>
+  textarea { display: none;}
+/* 인풋태그에 타입속성=속성값 :checked 일때 */
+ input[type=checkbox]:checked + label + textarea { /*옆으로 옆으로*/
+    display: inline-block;
+  }
+</style>
+
+
+
+
+<input type='checkbox' id='a'><label for='a'>정보 1</label>
+<textarea name='info_a'></textarea>
+<br>
+<input type='checkbox' id='b'><label for='b'>정보 2</label>
+  <textarea name='info_b'></textarea>
+<br>
+<input type='checkbox' id='c'><label for='c'>정보 3</label>
+<textarea name='info_c'></textarea>
+<br>

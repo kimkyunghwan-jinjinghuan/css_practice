@@ -1,0 +1,37 @@
+<style>
+  input[name=tab], div {display: none;}
+
+  /* div { display: none;} */
+  input:checked + label > span { /* '>' 상속관계 */
+    background-color: red;
+  }
+
+/* 1번이 체크되었으면, 그 형제요소들도 '~'기호 */
+  input:nth-of-type(1):checked ~ div:nth-of-type(1),
+  input:nth-of-type(2):checked ~ div:nth-of-type(2) { 
+    display: block;
+  } 
+</style>
+
+<!-- 
+  들여쓰기 되면 자식이 된다. +는 형제, >부모자식
+ -->
+
+
+<!-- 
+   input label
+   input:checked되면 생기는 가상클래스 
+-->
+
+<!-- 바깥여백 마진, 안여백 패딩 -->
+
+
+
+
+<input type="radio" name="tab" id="tab1">
+ <label for="tab1"><span>공지사항</span></label>
+ /
+ <input type="radio" name="tab" id="tab2">
+ <label for="tab2"><span>FAQ</span></label>
+ <div id="content1">공지사항 목록</div>
+ <div id="content2">FAQ 목록</div>
